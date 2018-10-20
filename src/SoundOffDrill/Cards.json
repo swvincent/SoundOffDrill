@@ -1,0 +1,141 @@
+{
+  "WordShapes": [
+    {
+      "Name":  "CVC",
+      "Description": "Consonant, Vowel, Consonant",
+      "SoundSets": [ "BeginConsonant", "Vowel", "EndConsonant" ]
+    }
+  ],
+  "Cards": [
+    {
+      "CardText": "a",
+      "SoundClass": "Vowel",
+      "Positions": [ 1 ]
+    },
+    {
+      "CardText": "b",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "c",
+      "SoundClass": "Consonant",
+      "Positions": [ 0 ]
+    },
+    {
+      "CardText": "d",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "e",
+      "SoundClass": "Vowel",
+      "Positions": [ 1 ]
+    },
+    {
+      "CardText": "f",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "g",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "h",
+      "SoundClass": "Consonant",
+      "Positions": [ 0 ]
+    },
+    {
+      "CardText": "i",
+      "SoundClass": "Vowel",
+      "Positions": [ 1 ]
+    },
+    {
+      "CardText": "j",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "k",
+      "SoundClass": "Consonant",
+      "Positions": [ 0 ]
+    },
+    {
+      "CardText": "l",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "m",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "n",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "o",
+      "SoundClass": "Vowel",
+      "Positions": [ 1 ]
+    },
+    {
+      "CardText": "p",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "qu",
+      "SoundClass": "Consonant",
+      "Positions": [ 0 ]
+    },
+    {
+      "CardText": "r",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "s",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "t",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "u",
+      "SoundClass": "Vowel",
+      "Positions": [ 1 ]
+    },
+    {
+      "CardText": "v",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "w",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    },
+    {
+      "CardText": "x",
+      "SoundClass": "Consonant",
+      "Positions": [ 2 ]
+    },
+    {
+      "CardText": "y",
+      "SoundClass": "Consonant",
+      "Positions": [ 0 ]
+    },
+    {
+      "CardText": "z",
+      "SoundClass": "Consonant",
+      "Positions": [ 0, 2 ]
+    }
+  ]
+}
