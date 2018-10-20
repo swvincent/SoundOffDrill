@@ -50,7 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biz\Card.cs" />
-    <Compile Include="Data\CardMapper.cs" />
+    <Compile Include="Biz\Drill.cs" />
+    <Compile Include="Biz\NonVowelCard.cs" />
+    <Compile Include="Biz\VowelCard.cs" />
+    <Compile Include="Data\VowelCardMapper.cs" />
     <Compile Include="GUI\TestForm.cs">
       <SubType>Form</SubType>
     </Compile>

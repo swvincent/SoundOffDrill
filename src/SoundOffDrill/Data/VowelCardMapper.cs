@@ -26,32 +26,33 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using SoundOffDrill.Data;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SoundOffDrill.Biz;
 
-namespace SoundOffDrill.GUI
+namespace SoundOffDrill.Data
 {
-    public partial class TestForm : Form
+    public class VowelCardMapper
     {
-        public TestForm()
+        public List<VowelCard> RetrieveCards()
         {
-            InitializeComponent();
-        }
+            List<VowelCard> cards;
 
-        private void TestForm_Load(object sender, EventArgs e)
-        {
-            var mapper = new VowelCardMapper();
+            using (StreamReader reader = new StreamReader("Cards.json"))
+            {
+                // Figured this out from
+                // https://www.newtonsoft.com/json/help/html/ToObjectComplex.htm
+                string json = reader.ReadToEnd();
+                var data = JObject.Parse(json);
+                JArray a = (JArray)data["VowelCards"];
+                cards = a.ToObject<List<VowelCard>>();
+            }
 
-            var cards = mapper.RetrieveCards();
-
-            textBox1.Text = string.Join(Environment.NewLine, cards.Select(c => c.CardText));
+            return cards;
         }
     }
 }

@@ -26,32 +26,12 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using SoundOffDrill.Data;
-using SoundOffDrill.Biz;
 
-namespace SoundOffDrill.GUI
+namespace SoundOffDrill.Biz
 {
-    public partial class TestForm : Form
-    {
-        public TestForm()
-        {
-            InitializeComponent();
-        }
-
-        private void TestForm_Load(object sender, EventArgs e)
-        {
-            var mapper = new VowelCardMapper();
-
-            var cards = mapper.RetrieveCards();
-
-            textBox1.Text = string.Join(Environment.NewLine, cards.Select(c => c.CardText));
-        }
-    }
+    public class VowelCard : Card
+    { }
 }
