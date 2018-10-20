@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundOffDrill", "SoundOffDrill\SoundOffDrill.csproj", "{196B3821-2D15-4F30-B8C6-6566D5BCA62C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundOffDrill", "src\SoundOffDrill\SoundOffDrill.csproj", "{196B3821-2D15-4F30-B8C6-6566D5BCA62C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
