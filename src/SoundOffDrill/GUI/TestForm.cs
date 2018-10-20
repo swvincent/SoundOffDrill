@@ -50,13 +50,21 @@ namespace SoundOffDrill.GUI
 
             var mapper = new JsonMapper("Cards.json");
 
-            var outerCards = mapper.RetrieveList<OuterCard>("OuterCards");
-            string outerCardsText = string.Join(Environment.NewLine, outerCards.Select(c => c.Sound));
-
             var middleCards = mapper.RetrieveList<Card>("MiddleCards");
-            string middleCardsText = string.Join(Environment.NewLine, middleCards.Select(c => c.Sound));
+            var outerCards = mapper.RetrieveList<OuterCard>("OuterCards");
 
-            textBox1.Text = outerCardsText + Environment.NewLine + middleCardsText;
+            var drill = new Drill(middleCards, outerCards);
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var deck in drill.Decks)
+            {
+                sb.AppendLine($"Deck: {deck.Key.ToString()}");
+                sb.AppendLine(string.Join(", ", deck.Value));
+                sb.AppendLine();
+            }
+
+            textBox1.Text = sb.ToString();
         }
     }
 }

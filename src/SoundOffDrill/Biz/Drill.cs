@@ -33,20 +33,56 @@ using SoundOffDrill.Biz;
 
 namespace SoundOffDrill.Biz
 {
+    enum WordPosition
+    {
+        Begin,
+        Middle,
+        End
+    }
+
     class Drill
     {
-        //TODO: Going to create a collection using enum, etc.
-        private List<string> BeginSounds { get; set; }
-        private List<string> middle { get; set; }
-        private List<string> EndSounds { get; set; }
+        public Dictionary<WordPosition, List<string>> Decks { get; set; }
 
         public Drill(List<Card> middleCards, List<OuterCard> outerCards)
         {
-            // Add inner card sounds
-            this.middle = middleCards.Select(i => i.Sound).ToList();
+            Decks = new Dictionary<WordPosition, List<string>>();
 
-            //blhe
+            // Add Middle cards (Vowels)
+            Decks.Add(WordPosition.Middle,
+                middleCards.Select(c => c.Sound).ToList());
+
+            // Begin gets beginning sounds and sounds that go in both.
+            Decks.Add(WordPosition.Begin,
+                outerCards
+                .Where(c => c.SoundPosition == SoundPosition.Begin ||
+                    c.SoundPosition == SoundPosition.Both)
+                .Select(c => c.Sound).ToList());
+
+            // End gets ending sounds and sounds that go in both.
+            Decks.Add(WordPosition.End,
+                outerCards
+                .Where(c => c.SoundPosition == SoundPosition.End ||
+                    c.SoundPosition == SoundPosition.Both)
+                .Select(c => c.Sound).ToList());
+
+            // Remaining sounds are either/or and must be split betweeen Beginning and End.
+            List<string> eitherOrSounds = outerCards
+                .Where(c => c.SoundPosition == SoundPosition.EitherOr)
+                .Select(c => c.Sound).ToList();
+
+            eitherOrSounds.Shuffle();
+
+            foreach (var sound in eitherOrSounds)
+            {
+                if (Decks[WordPosition.End].Count() < Decks[WordPosition.Begin].Count())
+                    Decks[WordPosition.End].Add(sound);
+                else
+                    Decks[WordPosition.Begin].Add(sound);
+            }
+
+            // var blah = eitherOrSounds.Split(2);
+
         }
-
     }
 }

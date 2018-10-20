@@ -34,8 +34,8 @@ namespace SoundOffDrill.Biz
 {
     public enum SoundPosition
     {
-        EitherExclusive,
-        Either,
+        EitherOr,
+        Both,
         Begin,
         End
     }

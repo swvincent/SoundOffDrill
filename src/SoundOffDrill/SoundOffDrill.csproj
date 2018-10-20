@@ -51,7 +51,9 @@
   <ItemGroup>
     <Compile Include="Biz\Card.cs" />
     <Compile Include="Biz\Drill.cs" />
+    <Compile Include="Biz\ListExtensions.cs" />
     <Compile Include="Biz\OuterCard.cs" />
+    <Compile Include="Biz\ShuffleExtension.cs" />
     <Compile Include="Data\JsonMapper.cs" />
     <Compile Include="GUI\TestForm.cs">
       <SubType>Form</SubType>
