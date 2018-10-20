@@ -51,12 +51,12 @@ namespace SoundOffDrill.GUI
             var mapper = new JsonMapper("Cards.json");
 
             var outerCards = mapper.RetrieveList<OuterCard>("OuterCards");
-            string outerCardsText = string.Join(Environment.NewLine, outerCards.Select(c => c.CardText));
+            string outerCardsText = string.Join(Environment.NewLine, outerCards.Select(c => c.Sound));
 
-            var innerCards = mapper.RetrieveList<Card>("InnerCards");
-            string innerCardsText = string.Join(Environment.NewLine, innerCards.Select(c => c.CardText));
+            var middleCards = mapper.RetrieveList<Card>("MiddleCards");
+            string middleCardsText = string.Join(Environment.NewLine, middleCards.Select(c => c.Sound));
 
-            textBox1.Text = outerCardsText + innerCardsText;
+            textBox1.Text = outerCardsText + Environment.NewLine + middleCardsText;
         }
     }
 }

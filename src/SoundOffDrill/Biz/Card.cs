@@ -34,7 +34,7 @@ namespace SoundOffDrill.Biz
 {
     public class Card
     {
-        public string CardText { get; set; }
+        public string Sound { get; set; }
         public string SoundClass { get; set; }
     }
 }

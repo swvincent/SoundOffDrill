@@ -6,159 +6,133 @@
       "SoundSets": [ "BeginConsonant", "Vowel", "EndConsonant" ]
     }
   ],
-  "InnerCards": [
+  "MiddleCards": [
     {
-      "CardText": "a",
-      "SoundClass": "Vowel",
-      "Positions": [ 1 ]
+      "Sound": "a",
+      "SoundClass": "Vowel"
     },
     {
-      "CardText": "e",
-      "SoundClass": "Vowel",
-      "Positions": [ 1 ]
+      "Sound": "e",
+      "SoundClass": "Vowel"
     },
     {
-      "CardText": "i",
-      "SoundClass": "Vowel",
-      "Positions": [ 1 ]
+      "Sound": "i",
+      "SoundClass": "Vowel"
     },
     {
-      "CardText": "o",
-      "SoundClass": "Vowel",
-      "Positions": [ 1 ]
+      "Sound": "o",
+      "SoundClass": "Vowel"
     },
     {
-      "CardText": "u",
-      "SoundClass": "Vowel",
-      "Positions": [ 1 ]
+      "Sound": "u",
+      "SoundClass": "Vowel"
     }
   ],
   "OuterCards": [
     {
-      "CardText": "b",
+      "Sound": "b",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "c",
+      "Sound": "c",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": false
+      "SoundPosition": 2
     },
     {
-      "CardText": "d",
+      "Sound": "d",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "f",
+      "Sound": "f",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "g",
+      "Sound": "g",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "h",
+      "Sound": "h",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": false
+      "SoundPosition": 2
     },
     {
-      "CardText": "j",
+      "Sound": "j",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "k",
+      "Sound": "k",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": false
+      "SoundPosition": 2
     },
     {
-      "CardText": "l",
+      "Sound": "l",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "m",
+      "Sound": "m",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "n",
+      "Sound": "n",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "p",
+      "Sound": "p",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "qu",
+      "Sound": "qu",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": false
+      "SoundPosition": 2
     },
     {
-      "CardText": "r",
+      "Sound": "r",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "s",
+      "Sound": "s",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "t",
+      "Sound": "t",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "v",
+      "Sound": "v",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "w",
+      "Sound": "w",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     },
     {
-      "CardText": "x",
+      "Sound": "x",
       "SoundClass": "Consonant",
-      "CanBegin": false,
-      "CanEnd": true
+      "SoundPosition": 3
     },
     {
-      "CardText": "y",
+      "Sound": "y",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": false
+      "SoundPosition": 2
     },
     {
-      "CardText": "z",
+      "Sound": "z",
       "SoundClass": "Consonant",
-      "CanBegin": true,
-      "CanEnd": true
+      "SoundPosition": 0
     }
   ]
 }

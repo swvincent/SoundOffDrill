@@ -32,9 +32,16 @@ using System.Threading.Tasks;
 
 namespace SoundOffDrill.Biz
 {
+    public enum SoundPosition
+    {
+        EitherExclusive,
+        Either,
+        Begin,
+        End
+    }
+
     public class OuterCard : Card
     {
-        public bool CanBegin { get; set; }
-        public bool CanEnd { get; set; }
+        public SoundPosition SoundPosition { get; set; }
     }
 }

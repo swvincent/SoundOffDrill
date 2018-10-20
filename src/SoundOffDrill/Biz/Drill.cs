@@ -35,6 +35,18 @@ namespace SoundOffDrill.Biz
 {
     class Drill
     {
+        //TODO: Going to create a collection using enum, etc.
+        private List<string> BeginSounds { get; set; }
+        private List<string> middle { get; set; }
+        private List<string> EndSounds { get; set; }
+
+        public Drill(List<Card> middleCards, List<OuterCard> outerCards)
+        {
+            // Add inner card sounds
+            this.middle = middleCards.Select(i => i.Sound).ToList();
+
+            //blhe
+        }
 
     }
 }
