@@ -33,7 +33,7 @@ using SoundOffDrill.Biz;
 
 namespace SoundOffDrill.Biz
 {
-    enum WordPosition
+    enum DeckPosition
     {
         Begin,
         Middle,
@@ -42,47 +42,63 @@ namespace SoundOffDrill.Biz
 
     class Drill
     {
-        public Dictionary<WordPosition, List<string>> Decks { get; set; }
+        public Dictionary<DeckPosition, List<string>> Decks { get; set; }
 
-        public Drill(List<Card> middleCards, List<OuterCard> outerCards)
+        /// <summary>
+        /// Create new Drill
+        /// </summary>
+        /// <param name="cards">Cards to include in Drill</param>
+        /// <param name="outerCards">Outside cards for beginning and end</param>
+        public Drill(List<Card> cards)
         {
-            Decks = new Dictionary<WordPosition, List<string>>();
+            // Create decks starting with cards that have a definite place.
+            Decks = new Dictionary<DeckPosition, List<string>>
+            {
+                {
+                    DeckPosition.Begin,
+                    cards.Where(c => c.SoundPosition == SoundPosition.Begin ||
+                        c.SoundPosition == SoundPosition.Both)
+                        .Select(c => c.Sound).ToList()
+                },
 
-            // Add Middle cards (Vowels)
-            Decks.Add(WordPosition.Middle,
-                middleCards.Select(c => c.Sound).ToList());
+                // Middle cards (Vowels)
+                {
+                    DeckPosition.Middle,
+                    cards.Where(c => c.SoundPosition == SoundPosition.Middle)
+                        .Select(c => c.Sound).ToList()
+                },
 
-            // Begin gets beginning sounds and sounds that go in both.
-            Decks.Add(WordPosition.Begin,
-                outerCards
-                .Where(c => c.SoundPosition == SoundPosition.Begin ||
-                    c.SoundPosition == SoundPosition.Both)
-                .Select(c => c.Sound).ToList());
-
-            // End gets ending sounds and sounds that go in both.
-            Decks.Add(WordPosition.End,
-                outerCards
-                .Where(c => c.SoundPosition == SoundPosition.End ||
-                    c.SoundPosition == SoundPosition.Both)
-                .Select(c => c.Sound).ToList());
+                // End gets ending sounds and sounds that go in both.
+                {
+                    DeckPosition.End,
+                    cards.Where(c => c.SoundPosition == SoundPosition.End ||
+                        c.SoundPosition == SoundPosition.Both)
+                        .Select(c => c.Sound).ToList()
+                }
+            };
 
             // Remaining sounds are either/or and must be split betweeen Beginning and End.
-            List<string> eitherOrSounds = outerCards
+            List<string> eitherOrSounds = cards
                 .Where(c => c.SoundPosition == SoundPosition.EitherOr)
                 .Select(c => c.Sound).ToList();
 
+            // Use Shuffle extension to randomize then
+            // distribute to make both lists same qty
             eitherOrSounds.Shuffle();
 
             foreach (var sound in eitherOrSounds)
             {
-                if (Decks[WordPosition.End].Count() < Decks[WordPosition.Begin].Count())
-                    Decks[WordPosition.End].Add(sound);
+                if (Decks[DeckPosition.End].Count() < Decks[DeckPosition.Begin].Count())
+                    Decks[DeckPosition.End].Add(sound);
                 else
-                    Decks[WordPosition.Begin].Add(sound);
+                    Decks[DeckPosition.Begin].Add(sound);
             }
 
-            // var blah = eitherOrSounds.Split(2);
-
+            // Randomize decks now that they're all complete
+            foreach (var deck in Decks.Values)
+            {
+                deck.Shuffle();
+            }
         }
     }
 }

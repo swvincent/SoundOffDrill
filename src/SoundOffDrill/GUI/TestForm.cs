@@ -50,10 +50,9 @@ namespace SoundOffDrill.GUI
 
             var mapper = new JsonMapper("Cards.json");
 
-            var middleCards = mapper.RetrieveList<Card>("MiddleCards");
-            var outerCards = mapper.RetrieveList<OuterCard>("OuterCards");
+            var cards = mapper.RetrieveList<Card>("Cards");
 
-            var drill = new Drill(middleCards, outerCards);
+            var drill = new Drill(cards);
 
             StringBuilder sb = new StringBuilder();
 

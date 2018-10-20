@@ -24,17 +24,21 @@
 ///////////////////////////////////////////////////////////////////////////////
 #endregion LICENSE
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace SoundOffDrill.Biz
 {
+    public enum SoundPosition
+    {
+        EitherOr,
+        Both,
+        Begin,
+        End,
+        Middle
+    }
+
     public class Card
     {
         public string Sound { get; set; }
         public string SoundClass { get; set; }
+        public SoundPosition SoundPosition { get; set; }
     }
 }

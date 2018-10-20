@@ -6,29 +6,32 @@
       "SoundSets": [ "BeginConsonant", "Vowel", "EndConsonant" ]
     }
   ],
-  "MiddleCards": [
+  "Cards": [
     {
       "Sound": "a",
-      "SoundClass": "Vowel"
+      "SoundClass": "Vowel",
+      "SoundPosition": 4
     },
     {
       "Sound": "e",
-      "SoundClass": "Vowel"
+      "SoundClass": "Vowel",
+      "SoundPosition": 4
     },
     {
       "Sound": "i",
-      "SoundClass": "Vowel"
+      "SoundClass": "Vowel",
+      "SoundPosition": 4
     },
     {
       "Sound": "o",
-      "SoundClass": "Vowel"
+      "SoundClass": "Vowel",
+      "SoundPosition": 4
     },
     {
       "Sound": "u",
-      "SoundClass": "Vowel"
-    }
-  ],
-  "OuterCards": [
+      "SoundClass": "Vowel",
+      "SoundPosition": 4
+    },
     {
       "Sound": "b",
       "SoundClass": "Consonant",
