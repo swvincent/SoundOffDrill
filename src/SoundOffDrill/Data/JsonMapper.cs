@@ -29,9 +29,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using SoundOffDrill.Biz;
 
-namespace SoundOffDrill.Biz
+namespace SoundOffDrill.Data
 {
-    public class VowelCard : Card
-    { }
+    public class JsonMapper
+    {
+        private JObject data;
+
+        public JsonMapper(string fileName)
+        {
+            using (var reader = new StreamReader(fileName))
+            {
+                string json = reader.ReadToEnd();
+                data = JObject.Parse(json);
+            }
+        }
+
+        public List<T> RetrieveList<T>(string key)
+        {
+            List<T> t;
+
+            // Figured this out from
+            // https://www.newtonsoft.com/json/help/html/ToObjectComplex.htm
+            JArray a = (JArray)data[key];
+            if (a != null)
+                t = a.ToObject<List<T>>();
+            else
+                throw new JsonSerializationException(
+                    $"No JSON array was found with key \"{key}\".");
+
+            return t;
+        }
+    }
 }

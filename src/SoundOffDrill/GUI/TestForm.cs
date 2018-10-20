@@ -47,11 +47,16 @@ namespace SoundOffDrill.GUI
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            var mapper = new VowelCardMapper();
 
-            var cards = mapper.RetrieveCards();
+            var mapper = new JsonMapper("Cards.json");
 
-            textBox1.Text = string.Join(Environment.NewLine, cards.Select(c => c.CardText));
+            var outerCards = mapper.RetrieveList<OuterCard>("OuterCards");
+            string outerCardsText = string.Join(Environment.NewLine, outerCards.Select(c => c.CardText));
+
+            var innerCards = mapper.RetrieveList<Card>("InnerCards");
+            string innerCardsText = string.Join(Environment.NewLine, innerCards.Select(c => c.CardText));
+
+            textBox1.Text = outerCardsText + innerCardsText;
         }
     }
 }

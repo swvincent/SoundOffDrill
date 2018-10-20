@@ -29,30 +29,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using SoundOffDrill.Biz;
 
-namespace SoundOffDrill.Data
+namespace SoundOffDrill.Biz
 {
-    public class VowelCardMapper
+    public class OuterCard : Card
     {
-        public List<VowelCard> RetrieveCards()
-        {
-            List<VowelCard> cards;
-
-            using (StreamReader reader = new StreamReader("Cards.json"))
-            {
-                // Figured this out from
-                // https://www.newtonsoft.com/json/help/html/ToObjectComplex.htm
-                string json = reader.ReadToEnd();
-                var data = JObject.Parse(json);
-                JArray a = (JArray)data["VowelCards"];
-                cards = a.ToObject<List<VowelCard>>();
-            }
-
-            return cards;
-        }
+        public bool CanBegin { get; set; }
+        public bool CanEnd { get; set; }
     }
 }

@@ -6,7 +6,7 @@
       "SoundSets": [ "BeginConsonant", "Vowel", "EndConsonant" ]
     }
   ],
-  "VowelCards": [
+  "InnerCards": [
     {
       "CardText": "a",
       "SoundClass": "Vowel",
@@ -33,7 +33,7 @@
       "Positions": [ 1 ]
     }
   ],
-  "NonVowelCards": [
+  "OuterCards": [
     {
       "CardText": "b",
       "SoundClass": "Consonant",
