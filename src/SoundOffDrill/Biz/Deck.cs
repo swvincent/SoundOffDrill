@@ -26,44 +26,24 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using SoundOffDrill.Data;
-using SoundOffDrill.Biz;
 
-namespace SoundOffDrill.GUI
+namespace SoundOffDrill.Biz
 {
-    public partial class TestForm : Form
+    class Deck
     {
-        public TestForm()
+        public List<Card> Cards { get; set; }
+
+        public Deck(List<Card> cards)
         {
-            InitializeComponent();
+            Cards = cards;
         }
 
-        private void TestForm_Load(object sender, EventArgs e)
+        public void Add(Card s)
         {
-
-            var mapper = new JsonMapper("Cards.json");
-
-            var cards = mapper.RetrieveList<Card>("Cards");
-
-            var drill = new Drill(cards);
-
-            StringBuilder sb = new StringBuilder();
-
-            foreach (var deck in drill.Decks)
-            {
-                sb.AppendLine($"Deck: {deck.Key.ToString()}");
-                sb.AppendLine(string.Join(", ", deck.Value.Cards.Select(c => c.Sound)));
-                sb.AppendLine();
-            }
-
-            textBox1.Text = sb.ToString();
+            Cards.Add(s);
         }
     }
 }

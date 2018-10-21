@@ -42,7 +42,9 @@ namespace SoundOffDrill.Biz
 
     class Drill
     {
-        public Dictionary<DeckPosition, List<string>> Decks { get; set; }
+        public Dictionary<DeckPosition, Deck> Decks { get; set; }
+
+        #region Constructor
 
         /// <summary>
         /// Create new Drill
@@ -52,53 +54,56 @@ namespace SoundOffDrill.Biz
         public Drill(List<Card> cards)
         {
             // Create decks starting with cards that have a definite place.
-            Decks = new Dictionary<DeckPosition, List<string>>
+            Decks = new Dictionary<DeckPosition, Deck>
             {
                 {
                     DeckPosition.Begin,
-                    cards.Where(c => c.SoundPosition == SoundPosition.Begin ||
-                        c.SoundPosition == SoundPosition.Both)
-                        .Select(c => c.Sound).ToList()
+                    new Deck(
+                        cards.Where(c => c.SoundPosition == SoundPosition.Begin ||
+                            c.SoundPosition == SoundPosition.Both).ToList())
                 },
 
                 // Middle cards (Vowels)
                 {
                     DeckPosition.Middle,
-                    cards.Where(c => c.SoundPosition == SoundPosition.Middle)
-                        .Select(c => c.Sound).ToList()
+                    new Deck(
+                        cards.Where(c => c.SoundPosition == SoundPosition.Middle).ToList())
                 },
 
                 // End gets ending sounds and sounds that go in both.
                 {
                     DeckPosition.End,
-                    cards.Where(c => c.SoundPosition == SoundPosition.End ||
-                        c.SoundPosition == SoundPosition.Both)
-                        .Select(c => c.Sound).ToList()
+                    new Deck(
+                        cards.Where(c => c.SoundPosition == SoundPosition.End ||
+                            c.SoundPosition == SoundPosition.Both).ToList())
                 }
             };
 
             // Remaining sounds are either/or and must be split betweeen Beginning and End.
-            List<string> eitherOrSounds = cards
+            List<Card> eitherOrSounds = cards
                 .Where(c => c.SoundPosition == SoundPosition.EitherOr)
-                .Select(c => c.Sound).ToList();
+                .ToList();
 
             // Use Shuffle extension to randomize then
             // distribute to make both lists same qty
             eitherOrSounds.Shuffle();
 
-            foreach (var sound in eitherOrSounds)
+            foreach (var card in eitherOrSounds)
             {
-                if (Decks[DeckPosition.End].Count() < Decks[DeckPosition.Begin].Count())
-                    Decks[DeckPosition.End].Add(sound);
+                if (Decks[DeckPosition.End].Cards.Count() < Decks[DeckPosition.Begin].Cards.Count())
+                    Decks[DeckPosition.End].Add(card);
                 else
-                    Decks[DeckPosition.Begin].Add(sound);
+                    Decks[DeckPosition.Begin].Add(card);
             }
 
             // Randomize decks now that they're all complete
             foreach (var deck in Decks.Values)
             {
-                deck.Shuffle();
+                deck.Cards.Shuffle();
             }
         }
+
+        #endregion Constructor
+
     }
 }
