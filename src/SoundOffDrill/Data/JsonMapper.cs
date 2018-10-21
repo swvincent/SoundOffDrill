@@ -40,6 +40,10 @@ namespace SoundOffDrill.Data
     {
         private JObject data;
 
+        /// <summary>
+        /// Create new JSON mapper
+        /// </summary>
+        /// <param name="fileName">JSON file to open</param>
         public JsonMapper(string fileName)
         {
             using (var reader = new StreamReader(fileName))
@@ -49,6 +53,12 @@ namespace SoundOffDrill.Data
             }
         }
 
+        /// <summary>
+        /// Retrieve List of objects from JSON file.
+        /// </summary>
+        /// <typeparam name="T">Object type</typeparam>
+        /// <param name="key">key</param>
+        /// <returns>List of objects of specified type</returns>
         public List<T> RetrieveList<T>(string key)
         {
             List<T> t;

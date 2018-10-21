@@ -26,6 +26,9 @@
 
 namespace SoundOffDrill.Biz
 {
+    /// <summary>
+    /// Word position of Sound
+    /// </summary>
     public enum SoundPosition
     {
         EitherOr,

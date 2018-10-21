@@ -136,6 +136,66 @@
       "Sound": "z",
       "SoundClass": "Consonant",
       "SoundPosition": 0
+    },
+    {
+      "Sound": "ft",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "ld",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "lf",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "lp",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "lt",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "mp",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "nd",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "nk",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "nt",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "sk",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 1
+    },
+    {
+      "Sound": "sp",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 1
+    },
+    {
+      "Sound": "st",
+      "SoundClass": "ConsonantBlend",
+      "SoundPosition": 1
     }
   ]
 }

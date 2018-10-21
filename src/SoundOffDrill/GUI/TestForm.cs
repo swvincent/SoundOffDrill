@@ -70,9 +70,7 @@ namespace SoundOffDrill.GUI
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            var cards = drill.Next();
-
-            textBox2.Text = string.Join("", cards.Select(c => c.Sound));
+            textBox2.Text = drill.NextWord();
         }
     }
 }

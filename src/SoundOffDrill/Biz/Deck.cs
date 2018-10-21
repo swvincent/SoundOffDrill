@@ -34,7 +34,7 @@ namespace SoundOffDrill.Biz
 {
     class Deck
     {
-        int currentCardIndex = -1;
+        int currentCardIndex = 0;
 
         public List<Card> Cards { get; set; }
 
@@ -55,9 +55,18 @@ namespace SoundOffDrill.Biz
         /// Based on https://stackoverflow.com/a/26075847
         /// </remarks>
         /// <returns></returns>
-        public Card Next()
+        public Card NextCard()
         {
             currentCardIndex = ++currentCardIndex % Cards.Count;
+            return Cards[currentCardIndex];
+        }
+
+        /// <summary>
+        /// Retrieve current card
+        /// </summary>
+        /// <returns></returns>
+        public Card CurrentCard()
+        {
             return Cards[currentCardIndex];
         }
     }

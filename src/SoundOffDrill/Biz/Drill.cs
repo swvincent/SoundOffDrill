@@ -33,6 +33,9 @@ using SoundOffDrill.Biz;
 
 namespace SoundOffDrill.Biz
 {
+    /// <summary>
+    /// Word Position of Deck
+    /// </summary>
     enum DeckPosition
     {
         Begin,
@@ -104,10 +107,50 @@ namespace SoundOffDrill.Biz
         }
 
         #endregion Constructor
-        
-        public List<Card> Next()
+
+        #region Cards
+
+        /// <summary>
+        /// Retrieve current word from current cards.
+        /// </summary>
+        /// <returns></returns>
+        public string CurrentWord()
         {
-            return Decks.Values.Select(d => d.Next()).ToList();
+            return string.Join("", Decks.Values
+                .Select(d => d.CurrentCard().Sound));
         }
+
+        /// <summary>
+        /// Retrieve next word from cycling all decks to next card.
+        /// </summary>
+        /// <returns></returns>
+        public string NextWord()
+        {
+            return string.Join("", Decks.Values
+                .Select(d => d.NextCard().Sound));
+        }
+
+        /// <summary>
+        /// Retrieve current card for specified deck.
+        /// </summary>
+        /// <param name="deckPosition"></param>
+        /// <returns></returns>
+        public Card CurrentCard(DeckPosition deckPosition)
+        {
+            return Decks[deckPosition].CurrentCard();
+        }
+
+        /// <summary>
+        /// Retrieve next card for specified deck.
+        /// </summary>
+        /// <param name="deckPos"></param>
+        /// <returns></returns>
+        public Card NextCard(DeckPosition deckPosition)
+        {
+            return Decks[deckPosition].NextCard();
+        }
+
+        #endregion Cards
+
     }
 }
