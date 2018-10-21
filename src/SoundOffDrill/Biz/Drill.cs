@@ -42,7 +42,7 @@ namespace SoundOffDrill.Biz
 
     class Drill
     {
-        public Dictionary<DeckPosition, Deck> Decks { get; set; }
+        public SortedDictionary<DeckPosition, Deck> Decks { get; set; }
 
         #region Constructor
 
@@ -54,7 +54,7 @@ namespace SoundOffDrill.Biz
         public Drill(List<Card> cards)
         {
             // Create decks starting with cards that have a definite place.
-            Decks = new Dictionary<DeckPosition, Deck>
+            Decks = new SortedDictionary<DeckPosition, Deck>
             {
                 {
                     DeckPosition.Begin,
