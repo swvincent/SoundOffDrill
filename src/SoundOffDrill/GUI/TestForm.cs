@@ -40,6 +40,8 @@ namespace SoundOffDrill.GUI
 {
     public partial class TestForm : Form
     {
+        private Drill drill;
+
         public TestForm()
         {
             InitializeComponent();
@@ -52,7 +54,7 @@ namespace SoundOffDrill.GUI
 
             var cards = mapper.RetrieveList<Card>("Cards");
 
-            var drill = new Drill(cards);
+            drill = new Drill(cards);
 
             StringBuilder sb = new StringBuilder();
 
@@ -64,6 +66,13 @@ namespace SoundOffDrill.GUI
             }
 
             textBox1.Text = sb.ToString();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            var cards = drill.Next();
+
+            textBox2.Text = string.Join("", cards.Select(c => c.Sound));
         }
     }
 }

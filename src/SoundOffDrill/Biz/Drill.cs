@@ -104,6 +104,10 @@ namespace SoundOffDrill.Biz
         }
 
         #endregion Constructor
-
+        
+        public List<Card> Next()
+        {
+            return Decks.Values.Select(d => d.Next()).ToList();
+        }
     }
 }

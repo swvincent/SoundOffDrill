@@ -34,6 +34,8 @@ namespace SoundOffDrill.Biz
 {
     class Deck
     {
+        int currentCardIndex = -1;
+
         public List<Card> Cards { get; set; }
 
         public Deck(List<Card> cards)
@@ -44,6 +46,19 @@ namespace SoundOffDrill.Biz
         public void Add(Card s)
         {
             Cards.Add(s);
+        }
+
+        /// <summary>
+        /// Retrieve next Card in circular index
+        /// </summary>
+        /// <remarks>
+        /// Based on https://stackoverflow.com/a/26075847
+        /// </remarks>
+        /// <returns></returns>
+        public Card Next()
+        {
+            currentCardIndex = ++currentCardIndex % Cards.Count;
+            return Cards[currentCardIndex];
         }
     }
 }
