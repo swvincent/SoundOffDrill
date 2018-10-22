@@ -23,5 +23,44 @@ namespace SoundOffDrill.GUI
 
             cardsListBox.DataSource = cards;
         }
+
+        private void selectAllButton_Click(object sender, EventArgs e)
+        {
+            SelectAllCards(cardsListBox, true);
+        }
+
+        private void selectNoneButton_Click(object sender, EventArgs e)
+        {
+            SelectAllCards(cardsListBox, false);
+        }
+
+        private void SelectAllCards(ListBox listBox, bool selected)
+        {
+            int count = listBox.Items.Count;
+
+            if (count > 0)
+            {
+                // BeginUpdate/EndUpdate prevents redrawing on
+                // select (so it's speedier)
+                listBox.BeginUpdate();
+
+                for (int i = 0; i < listBox.Items.Count; i++)
+                {
+                    listBox.SetSelected(i, selected);
+                }
+
+                // Selecting all seems to cause it to scroll to bottom
+                listBox.TopIndex = 0;
+
+                listBox.EndUpdate();
+            }
+        }
+
+        private void DrillSettingsForm_Shown(object sender, EventArgs e)
+        {
+            // Call this on Shown instead of Constructor
+            // or the scroll to top doesn't work :-(
+            SelectAllCards(cardsListBox, true);
+        }
     }
 }
