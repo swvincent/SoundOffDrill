@@ -27,23 +27,38 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using SoundOffDrill.GUI;
+using System.Windows.Forms; 
 
-namespace SoundOffDrill
+namespace SoundOffDrill.GUI
 {
-    static class Program
+    /// <summary>
+    /// Class containing Helper methods for working with WinForms.
+    /// </summary>
+    public static class WinFormHelper
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        //TODO: Rewrite as an extension?
+        public static void ListBoxSelectAll(ListBox listBox, bool selected)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            int count = listBox.Items.Count;
+
+            if (count > 0)
+            {
+                // BeginUpdate/EndUpdate prevents redrawing on
+                // select (so it's speedier)
+                listBox.BeginUpdate();
+
+                for (int i = 0; i < listBox.Items.Count; i++)
+                {
+                    listBox.SetSelected(i, selected);
+                }
+
+                // Selecting all seems to cause it to scroll to bottom
+                listBox.TopIndex = 0;
+
+                listBox.EndUpdate();
+            }
         }
     }
 }

@@ -26,24 +26,45 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SoundOffDrill.GUI;
+using SoundOffDrill.Biz;
+using SoundOffDrill.Data;
 
-namespace SoundOffDrill
+namespace SoundOffDrill.GUI
 {
-    static class Program
+    public partial class MainForm : Form
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        public MainForm()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            InitializeComponent();
+
+            var mapper = new JsonMapper("Cards.json");
+            var cards = mapper.RetrieveList<Card>("Cards");
+
+            cardsListBox.DataSource = cards;
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            // Call this on Shown instead of Constructor
+            // or the scroll to top doesn't work :-(
+            WinFormHelper.ListBoxSelectAll(cardsListBox, true);
+        }
+
+        private void selectAllButton_Click(object sender, EventArgs e)
+        {
+            WinFormHelper.ListBoxSelectAll(cardsListBox, true);
+        }
+
+        private void selectNoneButton_Click(object sender, EventArgs e)
+        {
+            WinFormHelper.ListBoxSelectAll(cardsListBox, false);
         }
     }
 }
