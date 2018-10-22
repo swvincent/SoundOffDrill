@@ -9,207 +9,207 @@
   "Cards": [
     {
       "Sound": "a",
-      "SoundClass": "Vowel",
+      "SoundType": "Vowel",
       "SoundPosition": 4
     },
     {
       "Sound": "e",
-      "SoundClass": "Vowel",
+      "SoundType": "Vowel",
       "SoundPosition": 4
     },
     {
       "Sound": "i",
-      "SoundClass": "Vowel",
+      "SoundType": "Vowel",
       "SoundPosition": 4
     },
     {
       "Sound": "o",
-      "SoundClass": "Vowel",
+      "SoundType": "Vowel",
       "SoundPosition": 4
     },
     {
       "Sound": "u",
-      "SoundClass": "Vowel",
+      "SoundType": "Vowel",
       "SoundPosition": 4
     },
     {
       "Sound": "b",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "c",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 2
     },
     {
       "Sound": "d",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "f",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "g",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "h",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 2
     },
     {
       "Sound": "j",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "k",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 2
     },
     {
       "Sound": "l",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "m",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "n",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "p",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "qu",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 2
     },
     {
       "Sound": "r",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "s",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "t",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "v",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "w",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 2
     },
     {
       "Sound": "x",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 3
     },
     {
       "Sound": "y",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 2
     },
     {
       "Sound": "z",
-      "SoundClass": "Consonant",
+      "SoundType": "Consonant",
       "SoundPosition": 0
     },
     {
       "Sound": "ft",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "ld",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "lf",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "lp",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "lt",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "mp",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "nd",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "nk",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "nt",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 3
     },
     {
       "Sound": "sk",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 1
     },
     {
       "Sound": "sp",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 1
     },
     {
       "Sound": "st",
-      "SoundClass": "ConsonantBlend",
+      "SoundType": "ConsonantBlend",
       "SoundPosition": 1
     },
     {
       "Sound": "oo",
-      "SoundClass": "Dipthong",
+      "SoundType": "Dipthong",
       "SoundPosition": 4
     },
     {
       "Sound": "ou",
-      "SoundClass": "Dipthong",
+      "SoundType": "Dipthong",
       "SoundPosition": 4
     },
     {
       "Sound": "ow",
-      "SoundClass": "Dipthong",
+      "SoundType": "Dipthong",
       "SoundPosition": 4
     }
   ]
