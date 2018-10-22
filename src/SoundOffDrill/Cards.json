@@ -196,6 +196,21 @@
       "Sound": "st",
       "SoundClass": "ConsonantBlend",
       "SoundPosition": 1
+    },
+    {
+      "Sound": "oo",
+      "SoundClass": "Dipthong",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "ou",
+      "SoundClass": "Dipthong",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "ow",
+      "SoundClass": "Dipthong",
+      "SoundPosition": 4
     }
   ]
 }
