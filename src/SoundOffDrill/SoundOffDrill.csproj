@@ -54,6 +54,12 @@
     <Compile Include="Biz\Drill.cs" />
     <Compile Include="Biz\ShuffleExtension.cs" />
     <Compile Include="Data\JsonMapper.cs" />
+    <Compile Include="GUI\DrillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DrillForm.Designer.cs">
+      <DependentUpon>DrillForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="GUI\WinFormHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\DrillForm.resx">
+      <DependentUpon>DrillForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

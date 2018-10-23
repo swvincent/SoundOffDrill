@@ -66,5 +66,20 @@ namespace SoundOffDrill.GUI
         {
             WinFormHelper.ListBoxSelectAll(cardsListBox, false);
         }
+
+        private void beginDrillButton_Click(object sender, EventArgs e)
+        {
+            List<Card> cards = new List<Card>();
+
+            foreach (var item in cardsListBox.SelectedItems)
+            {
+                cards.Add((Card)item);
+            }
+
+            Drill drill = new Drill(cards);
+
+            var f = new DrillForm(drill);
+            f.Show();
+        }
     }
 }

@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 
 namespace SoundOffDrill.Biz
 {
-    class Deck
+    public class Deck
     {
         int currentCardIndex = 0;
 

@@ -36,16 +36,17 @@ namespace SoundOffDrill.Biz
     /// <summary>
     /// Word Position of Deck
     /// </summary>
-    enum DeckPosition
+    public enum DeckPosition
     {
         Begin,
         Middle,
         End
     }
 
-    class Drill
+    public class Drill
     {
-        public SortedDictionary<DeckPosition, Deck> Decks { get; set; }
+        public List<Card> Cards { get; }
+        public SortedDictionary<DeckPosition, Deck> Decks { get; internal set; }
 
         #region Constructor
 
@@ -53,16 +54,25 @@ namespace SoundOffDrill.Biz
         /// Create new Drill
         /// </summary>
         /// <param name="cards">Cards to include in Drill</param>
-        /// <param name="outerCards">Outside cards for beginning and end</param>
         public Drill(List<Card> cards)
         {
+            this.Cards = cards;
+            BuildDecks();
+        }
+
+        #endregion Constructor
+
+        #region Decks
+
+        private void BuildDecks()
+        {
             // Create decks starting with cards that have a definite place.
-            Decks = new SortedDictionary<DeckPosition, Deck>
+            this.Decks = new SortedDictionary<DeckPosition, Deck>
             {
                 {
                     DeckPosition.Begin,
                     new Deck(
-                        cards.Where(c => c.SoundPosition == SoundPosition.Begin ||
+                        Cards.Where(c => c.SoundPosition == SoundPosition.Begin ||
                             c.SoundPosition == SoundPosition.Both).ToList())
                 },
 
@@ -70,20 +80,20 @@ namespace SoundOffDrill.Biz
                 {
                     DeckPosition.Middle,
                     new Deck(
-                        cards.Where(c => c.SoundPosition == SoundPosition.Middle).ToList())
+                        Cards.Where(c => c.SoundPosition == SoundPosition.Middle).ToList())
                 },
 
                 // End gets ending sounds and sounds that go in both.
                 {
                     DeckPosition.End,
                     new Deck(
-                        cards.Where(c => c.SoundPosition == SoundPosition.End ||
+                        Cards.Where(c => c.SoundPosition == SoundPosition.End ||
                             c.SoundPosition == SoundPosition.Both).ToList())
                 }
             };
 
             // Remaining sounds are either/or and must be split betweeen Beginning and End.
-            List<Card> eitherOrSounds = cards
+            List<Card> eitherOrSounds = Cards
                 .Where(c => c.SoundPosition == SoundPosition.EitherOr)
                 .ToList();
 
@@ -106,7 +116,7 @@ namespace SoundOffDrill.Biz
             }
         }
 
-        #endregion Constructor
+        #endregion Decks
 
         #region Cards
 
