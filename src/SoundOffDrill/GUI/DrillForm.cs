@@ -32,5 +32,19 @@ namespace SoundOffDrill.GUI
         {
             wordTextBox.Text = drill.PrevWord();
         }
+
+        private void PrevCard_Click(object sender, EventArgs e)
+        {
+            DeckPosition deckPos = (DeckPosition)Convert.ToInt32((sender as Button).Tag);
+            drill.PrevCard(deckPos);
+            wordTextBox.Text = drill.CurrentWord();
+        }
+
+        private void NextCard_Click(object sender, EventArgs e)
+        {
+            DeckPosition deckPos = (DeckPosition)Convert.ToInt32((sender as Button).Tag);
+            drill.NextCard(deckPos);
+            wordTextBox.Text = drill.CurrentWord();
+        }
     }
 }
