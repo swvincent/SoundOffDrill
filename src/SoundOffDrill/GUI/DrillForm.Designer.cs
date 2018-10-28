@@ -34,6 +34,8 @@
             // 
             // wordTextBox
             // 
+            this.wordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.wordTextBox.Font = new System.Drawing.Font("OpenDyslexic 3", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wordTextBox.Location = new System.Drawing.Point(12, 12);
             this.wordTextBox.Name = "wordTextBox";
