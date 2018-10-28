@@ -49,6 +49,19 @@ namespace SoundOffDrill.Biz
         }
 
         /// <summary>
+        /// Retrieve previous Card in circular index
+        /// </summary>
+        /// <remarks>
+        /// Based on https://stackoverflow.com/a/33782325
+        /// </remarks>
+        /// <returns></returns>
+        public Card PrevCard()
+        {
+            currentCardIndex = (Cards.Count + currentCardIndex - 1) % Cards.Count;
+            return Cards[currentCardIndex];
+        }
+
+        /// <summary>
         /// Retrieve next Card in circular index
         /// </summary>
         /// <remarks>

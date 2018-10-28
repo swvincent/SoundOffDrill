@@ -131,6 +131,16 @@ namespace SoundOffDrill.Biz
         }
 
         /// <summary>
+        /// Retrieve previous word from cycling all decks to previous card.
+        /// </summary>
+        /// <returns></returns>
+        public string PrevWord()
+        {
+            return string.Join("", Decks.Values
+                .Select(d => d.PrevCard().Sound));
+        }
+
+        /// <summary>
         /// Retrieve next word from cycling all decks to next card.
         /// </summary>
         /// <returns></returns>
@@ -148,6 +158,16 @@ namespace SoundOffDrill.Biz
         public Card CurrentCard(DeckPosition deckPosition)
         {
             return Decks[deckPosition].CurrentCard();
+        }
+
+        /// <summary>
+        /// Retrieve prev card for specified deck.
+        /// </summary>
+        /// <param name="deckPos"></param>
+        /// <returns></returns>
+        public Card PrevCard(DeckPosition deckPosition)
+        {
+            return Decks[deckPosition].PrevCard();
         }
 
         /// <summary>

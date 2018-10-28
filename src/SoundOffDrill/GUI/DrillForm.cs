@@ -27,5 +27,10 @@ namespace SoundOffDrill.GUI
         {
             wordTextBox.Text = drill.NextWord();
         }
+
+        private void prevWordButton_Click(object sender, EventArgs e)
+        {
+            wordTextBox.Text = drill.PrevWord();
+        }
     }
 }

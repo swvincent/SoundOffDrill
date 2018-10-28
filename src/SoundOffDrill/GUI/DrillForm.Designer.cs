@@ -30,6 +30,7 @@
         {
             this.wordTextBox = new System.Windows.Forms.TextBox();
             this.nextWordButton = new System.Windows.Forms.Button();
+            this.prevWordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // wordTextBox
@@ -46,7 +47,7 @@
             // 
             // nextWordButton
             // 
-            this.nextWordButton.Location = new System.Drawing.Point(362, 234);
+            this.nextWordButton.Location = new System.Drawing.Point(424, 234);
             this.nextWordButton.Name = "nextWordButton";
             this.nextWordButton.Size = new System.Drawing.Size(75, 23);
             this.nextWordButton.TabIndex = 0;
@@ -54,12 +55,23 @@
             this.nextWordButton.UseVisualStyleBackColor = true;
             this.nextWordButton.Click += new System.EventHandler(this.nextWordButton_Click);
             // 
+            // prevWordButton
+            // 
+            this.prevWordButton.Location = new System.Drawing.Point(314, 234);
+            this.prevWordButton.Name = "prevWordButton";
+            this.prevWordButton.Size = new System.Drawing.Size(75, 23);
+            this.prevWordButton.TabIndex = 2;
+            this.prevWordButton.Text = "&Prev Word";
+            this.prevWordButton.UseVisualStyleBackColor = true;
+            this.prevWordButton.Click += new System.EventHandler(this.prevWordButton_Click);
+            // 
             // DrillForm
             // 
             this.AcceptButton = this.nextWordButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 269);
+            this.Controls.Add(this.prevWordButton);
             this.Controls.Add(this.nextWordButton);
             this.Controls.Add(this.wordTextBox);
             this.Name = "DrillForm";
@@ -73,5 +85,6 @@
 
         private System.Windows.Forms.TextBox wordTextBox;
         private System.Windows.Forms.Button nextWordButton;
+        private System.Windows.Forms.Button prevWordButton;
     }
 }
