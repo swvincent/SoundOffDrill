@@ -54,6 +54,7 @@
     <Compile Include="Biz\Drill.cs" />
     <Compile Include="Biz\ShuffleExtension.cs" />
     <Compile Include="Data\JsonMapper.cs" />
+    <Compile Include="Util\WinFormsExtensions.cs" />
     <Compile Include="GUI\DrillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +112,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Util\WinFormsExtensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

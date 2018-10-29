@@ -33,9 +33,9 @@
             this.prevWordButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.leftPrevCardButton = new System.Windows.Forms.Button();
             this.leftNextCardButton = new System.Windows.Forms.Button();
             this.centerPrevCardButton = new System.Windows.Forms.Button();
@@ -48,14 +48,18 @@
             // 
             // wordTextBox
             // 
-            this.wordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.wordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.wordTextBox.Font = new System.Drawing.Font("OpenDyslexic 3", 71.99999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wordTextBox.Location = new System.Drawing.Point(3, 5);
+            this.wordTextBox.Font = new System.Drawing.Font("OpenDyslexic 3", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordTextBox.Location = new System.Drawing.Point(3, 3);
+            this.wordTextBox.MinimumSize = new System.Drawing.Size(572, 166);
             this.wordTextBox.Name = "wordTextBox";
-            this.wordTextBox.Size = new System.Drawing.Size(572, 198);
+            this.wordTextBox.Size = new System.Drawing.Size(572, 166);
             this.wordTextBox.TabIndex = 1;
+            this.wordTextBox.Text = "testing!";
             this.wordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wordTextBox.SizeChanged += new System.EventHandler(this.wordTextBox_SizeChanged);
             // 
             // nextWordButton
             // 
@@ -92,7 +96,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 266);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 236);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
@@ -122,7 +126,7 @@
             this.tableLayoutPanel2.Controls.Add(this.centerNextCardButton, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.rightLeftCardButton, 6, 1);
             this.tableLayoutPanel2.Controls.Add(this.rightNextCardButton, 7, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 209);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 179);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -130,19 +134,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(572, 54);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
-            // label1
+            // label3
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label1, 2);
-            this.label1.Location = new System.Drawing.Point(139, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 27);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Left Card";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label3, 2);
+            this.label3.Location = new System.Drawing.Point(339, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 27);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Right Card";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -158,19 +162,19 @@
             this.label2.Text = "Center Card";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // label1
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.label3, 2);
-            this.label3.Location = new System.Drawing.Point(339, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 27);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Right Card";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.label1, 2);
+            this.label1.Location = new System.Drawing.Point(139, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 27);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Left Card";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // leftPrevCardButton
             // 
@@ -249,9 +253,9 @@
             this.AcceptButton = this.nextWordButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 291);
+            this.ClientSize = new System.Drawing.Size(604, 261);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(620, 330);
+            this.MinimumSize = new System.Drawing.Size(620, 300);
             this.Name = "DrillForm";
             this.Text = "Drill";
             this.tableLayoutPanel1.ResumeLayout(false);
