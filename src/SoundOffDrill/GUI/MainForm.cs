@@ -35,6 +35,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoundOffDrill.Biz;
 using SoundOffDrill.Data;
+using SoundOffDrill.Extensions.WinForms;
 
 namespace SoundOffDrill.GUI
 {
@@ -54,17 +55,17 @@ namespace SoundOffDrill.GUI
         {
             // Call this on Shown instead of Constructor
             // or the scroll to top doesn't work :-(
-            WinFormHelper.ListBoxSelectAll(cardsListBox, true);
+            cardsListBox.SelectAll(true);
         }
 
         private void selectAllButton_Click(object sender, EventArgs e)
         {
-            WinFormHelper.ListBoxSelectAll(cardsListBox, true);
+            cardsListBox.SelectAll(true);
         }
 
         private void selectNoneButton_Click(object sender, EventArgs e)
         {
-            WinFormHelper.ListBoxSelectAll(cardsListBox, false);
+            cardsListBox.SelectAll(false);
         }
 
         private void beginDrillButton_Click(object sender, EventArgs e)

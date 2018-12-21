@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace SoundOffDrill.Biz
+namespace SoundOffDrill.Extensions.List
 {
     /// <summary>
     /// Shuffle List extension
@@ -11,7 +11,7 @@ namespace SoundOffDrill.Biz
     /// Written by Rob Thijssen
     /// from https://stackoverflow.com/a/1262619
     /// </remarks>
-    static class ShuffleExtension
+    static class IListExtensions
     {
         public static void Shuffle<T>(this IList<T> list)
         {

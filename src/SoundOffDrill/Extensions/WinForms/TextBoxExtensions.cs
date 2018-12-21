@@ -32,13 +32,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace SoundOffDrill.Util.WinFormsExtensions
+namespace SoundOffDrill.Extensions.WinForms
 {
-    public static class WinFormsExtensions
+    public static class TextBoxExtensions
     {
-
-        #region Font Auto Resize
-
         /// <summary>
         /// Automatically resize font in single line textbox based on
         /// textbox size and length of sample string
@@ -50,7 +47,7 @@ namespace SoundOffDrill.Util.WinFormsExtensions
         /// </remarks>
         /// <param name="tb">Textbox</param>
         /// <param name="s">String to use as reference for width</param>
-        public static void FontAutoResize(this TextBox tb, string s)
+        public static void FontAutoResize(this System.Windows.Forms.TextBox tb, string s)
         {
             if (s.Length > 0)
             { 
@@ -96,12 +93,9 @@ namespace SoundOffDrill.Util.WinFormsExtensions
         /// so it resizes. A bit of a hack, but it works.
         /// </remarks>
         /// <param name="tb">Textbox</param>
-        public static void FontAutoResize(this TextBox tb)
+        public static void FontAutoResize(this System.Windows.Forms.TextBox tb)
         {
             FontAutoResize(tb, tb.Text);
         }
     }
-    
-    #endregion Font Auto Resize
-
 }

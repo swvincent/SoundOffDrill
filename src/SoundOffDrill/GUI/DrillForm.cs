@@ -34,7 +34,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SoundOffDrill.Biz;
-using SoundOffDrill.Util.WinFormsExtensions;
+using SoundOffDrill.Extensions.WinForms;
 
 namespace SoundOffDrill.GUI
 {
@@ -82,8 +82,8 @@ namespace SoundOffDrill.GUI
         
         private void wordTextBox_SizeChanged(object sender, EventArgs e)
         {
-            var tb = sender as TextBox;
-            tb.FontAutoResize("1234567890");
+            var t = sender as TextBox;
+            t.FontAutoResize("1234567890");
         }
     }
 }

@@ -52,9 +52,10 @@
     <Compile Include="Biz\Card.cs" />
     <Compile Include="Biz\Deck.cs" />
     <Compile Include="Biz\Drill.cs" />
-    <Compile Include="Biz\ShuffleExtension.cs" />
+    <Compile Include="Extensions\List\IListExtensions.cs" />
     <Compile Include="Data\JsonMapper.cs" />
-    <Compile Include="Util\WinFormsExtensions.cs" />
+    <Compile Include="Extensions\WinForms\ListBoxExtensions.cs" />
+    <Compile Include="Extensions\WinForms\TextBoxExtensions.cs" />
     <Compile Include="GUI\DrillForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +68,6 @@
     <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\WinFormHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\DrillForm.resx">
@@ -103,8 +103,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\WinFormsExtensions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
