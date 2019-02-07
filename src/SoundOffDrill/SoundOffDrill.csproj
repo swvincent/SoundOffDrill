@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biz\Card.cs" />
+    <Compile Include="Biz\Dealer.cs" />
     <Compile Include="Biz\Deck.cs" />
     <Compile Include="Biz\Drill.cs" />
     <Compile Include="Extensions\List\IListExtensions.cs" />

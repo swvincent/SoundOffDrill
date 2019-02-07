@@ -29,7 +29,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SoundOffDrill.Extensions.List;
 
 namespace SoundOffDrill.Biz
 {
@@ -56,67 +55,12 @@ namespace SoundOffDrill.Biz
         /// <param name="cards">Cards to include in Drill</param>
         public Drill(List<Card> cards)
         {
-            this.Cards = cards;
-            BuildDecks();
+            this.Cards = cards; // TODO: Needed?
+            var dealer = new Dealer();
+            Decks = dealer.BuildDecks(cards);
         }
 
         #endregion Constructor
-
-        #region Decks
-
-        private void BuildDecks()
-        {
-            // Create decks starting with cards that have a definite place.
-            this.Decks = new SortedDictionary<DeckPosition, Deck>
-            {
-                {
-                    DeckPosition.Begin,
-                    new Deck(
-                        Cards.Where(c => c.SoundPosition == SoundPosition.Begin ||
-                            c.SoundPosition == SoundPosition.Both).ToList())
-                },
-
-                // Middle cards (Vowels)
-                {
-                    DeckPosition.Middle,
-                    new Deck(
-                        Cards.Where(c => c.SoundPosition == SoundPosition.Middle).ToList())
-                },
-
-                // End gets ending sounds and sounds that go in both.
-                {
-                    DeckPosition.End,
-                    new Deck(
-                        Cards.Where(c => c.SoundPosition == SoundPosition.End ||
-                            c.SoundPosition == SoundPosition.Both).ToList())
-                }
-            };
-
-            // Remaining sounds are either/or and must be split betweeen Beginning and End.
-            List<Card> eitherOrSounds = Cards
-                .Where(c => c.SoundPosition == SoundPosition.EitherOr)
-                .ToList();
-
-            // Use Shuffle extension to randomize then
-            // distribute to make both lists same qty
-            eitherOrSounds.Shuffle();
-
-            foreach (var card in eitherOrSounds)
-            {
-                if (Decks[DeckPosition.End].Cards.Count() < Decks[DeckPosition.Begin].Cards.Count())
-                    Decks[DeckPosition.End].Add(card);
-                else
-                    Decks[DeckPosition.Begin].Add(card);
-            }
-
-            // Randomize decks now that they're all complete
-            foreach (var deck in Decks.Values)
-            {
-                deck.Cards.Shuffle();
-            }
-        }
-
-        #endregion Decks
 
         #region Cards
 
