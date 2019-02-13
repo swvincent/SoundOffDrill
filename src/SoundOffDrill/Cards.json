@@ -1,11 +1,4 @@
 {
-  "WordShapes": [
-    {
-      "Name": "CVC",
-      "Description": "Consonant, Vowel, Consonant",
-      "SoundSets": [ "BeginConsonant", "Vowel", "EndConsonant" ]
-    }
-  ],
   "Cards": [
     {
       "Sound": "a",
