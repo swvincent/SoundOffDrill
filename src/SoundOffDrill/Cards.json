@@ -131,64 +131,254 @@
       "SoundPosition": 0
     },
     {
-      "Sound": "ft",
-      "SoundType": "ConsonantBlend",
+      "Sound": "ch",
+      "SoundType": "Digraph",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "sh",
+      "SoundType": "Digraph",
+      "SoundPosition": 1
+    },
+    {
+      "Sound": "th",
+      "SoundType": "Digraph",
+      "SoundPosition": 1
+    },
+    {
+      "Sound": "wh",
+      "SoundType": "Digraph",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "bl",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "br",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "cl",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "cr",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "ct",
+      "SoundType": "Blend",
       "SoundPosition": 3
+    },
+    {
+      "Sound": "dr",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "dw",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "fl",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "fr",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "ft",
+      "SoundType": "Blend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "gl",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "gr",
+      "SoundType": "Blend",
+      "SoundPosition": 2
     },
     {
       "Sound": "ld",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 3
     },
     {
-      "Sound": "lf",
-      "SoundType": "ConsonantBlend",
+      "Sound": "lk",
+      "SoundType": "Blend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "lm",
+      "SoundType": "Blend",
       "SoundPosition": 3
     },
     {
       "Sound": "lp",
-      "SoundType": "ConsonantBlend",
-      "SoundPosition": 3
-    },
-    {
-      "Sound": "lt",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 3
     },
     {
       "Sound": "mp",
-      "SoundType": "ConsonantBlend",
-      "SoundPosition": 3
-    },
-    {
-      "Sound": "nd",
-      "SoundType": "ConsonantBlend",
-      "SoundPosition": 3
-    },
-    {
-      "Sound": "nk",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 3
     },
     {
       "Sound": "nt",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 3
     },
     {
+      "Sound": "pl",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "pr",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "pt",
+      "SoundType": "Blend",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "sc",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
       "Sound": "sk",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 1
     },
     {
+      "Sound": "sl",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "sm",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "sn",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
       "Sound": "sp",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 1
     },
     {
       "Sound": "st",
-      "SoundType": "ConsonantBlend",
+      "SoundType": "Blend",
       "SoundPosition": 1
+    },
+    {
+      "Sound": "sw",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "tr",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "tw",
+      "SoundType": "Blend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "scr",
+      "SoundType": "Triblend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "spl",
+      "SoundType": "Triblend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "spr",
+      "SoundType": "Triblend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "squ",
+      "SoundType": "Triblend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "str",
+      "SoundType": "Triblend",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "lch",
+      "SoundType": "Trigraph",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "nch",
+      "SoundType": "Trigraph",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "shr",
+      "SoundType": "Trigraph",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "thr",
+      "SoundType": "Trigraph",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "ck",
+      "SoundType": "SpellingRule",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "dge",
+      "SoundType": "SpellingRule",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "ff",
+      "SoundType": "SpellingRule",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "ss",
+      "SoundType": "SpellingRule",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "tch",
+      "SoundType": "SpellingRule",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "zz",
+      "SoundType": "SpellingRule",
+      "SoundPosition": 3
     },
     {
       "Sound": "oo",
@@ -201,8 +391,63 @@
       "SoundPosition": 4
     },
     {
-      "Sound": "ow",
-      "SoundType": "Dipthong",
+      "Sound": "ai",
+      "SoundType": "VowelTeam",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "ea",
+      "SoundType": "VowelTeam",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "oa",
+      "SoundType": "VowelTeam",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "gh",
+      "SoundType": "SilentLetter",
+      "SoundPosition": 3
+    },
+    {
+      "Sound": "gn",
+      "SoundType": "SilentLetter",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "kn",
+      "SoundType": "SilentLetter",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "wr",
+      "SoundType": "SilentLetter",
+      "SoundPosition": 2
+    },
+    {
+      "Sound": "ar",
+      "SoundType": "RControlledVowel",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "er",
+      "SoundType": "RControlledVowel",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "ir",
+      "SoundType": "RControlledVowel",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "or",
+      "SoundType": "RControlledVowel",
+      "SoundPosition": 4
+    },
+    {
+      "Sound": "ur",
+      "SoundType": "RControlledVowel",
       "SoundPosition": 4
     }
   ]
